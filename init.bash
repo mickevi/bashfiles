@@ -1,4 +1,6 @@
-cd ~/bashfiles
-for C in $(ls ???_*.bash) ; do
-   source $C
+cd ~/bashfiles || exit
+for C in ???_*.bash ; do
+  [[ -e "$C" ]] || break # When no files found
+  # shellcheck source=.
+   source "$C"
 done

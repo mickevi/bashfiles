@@ -5,5 +5,5 @@ export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 shopt -s histappend
 #PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND}history -c;history -r"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND};history -a;history -c;history -r"
 

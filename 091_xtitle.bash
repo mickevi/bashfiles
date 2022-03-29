@@ -1,2 +1,10 @@
-PROMPT_COMMAND="${PROMPT_COMMAND};echo -ne \"\033]0;\${USER}@\${HOSTNAME}: \${PWD}\007\""
+PROMPT_COMMAND="${PROMPT_COMMAND};set_xtitle"
+
+function xtitle {
+	export XTITLE="${1} "
+}
+
+function set_xtitle {
+	echo -ne "\033]0;${XTITLE} (${CMD}) ${USER}@${HOSTNAME}: ${PWD}\007"
+}
 

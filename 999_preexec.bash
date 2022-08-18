@@ -1,13 +1,15 @@
 source ~/.bash-preexec/bash-preexec.sh
-preexec() {
-        export CMD="$1"
-	set_xtitle
+function preexec() {
+  #export CMD="$1"
+  #  echo "preexec: $1::::"
+  set_xtitle "$1"
 }
 
 
-precmd() {
-        export CMD="$1"
-	set_xtitle
+function precmd() {
+  #export CMD="$1"
+  #echo "precmd: $1::::"
+	set_xtitle "$1"
 }
 
 

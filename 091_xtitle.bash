@@ -6,6 +6,6 @@ function xtitle {
 
 function set_xtitle {
   # echo "xtitle: $1"
-	echo -ne "\033]0;${XTITLE} ($1) ${USER}@${HOSTNAME}: ${PWD}\007"
+  echo -ne "\033]0;${XTITLE} ${HOSTNAME}: $(dirs)\007"
 }
 
